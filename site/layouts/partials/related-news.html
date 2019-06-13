@@ -1,0 +1,32 @@
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<section class="gindex-newspaper news-page-list post-relate">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="title-post-relate">Bài viết liên quan </h2>
+            </div>
+        </div>
+        <div class="row post-index-news">
+            {{ range . }}
+            <div class="col-lg-4 col-xl-4">
+                <article class="g-post">
+                    <img class="img-post"{{ with .Params.image }} src="{{ . }}"{{ end }} alt="{{ .Title }}">
+                    <div class="post-detail">
+                        <h3 class="title-post"><a href="{{ .RelPermalink }}">{{ .Title }}</a> </h3>
+                        <p class="description-post">{{ .Description }}</p>
+                    </div>
+                    <div class="news-social">
+                        <span class="time">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+                        <div class="group-news-social">
+                            <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ .RelPermalink }}"><i class="fab fa-facebook-f"></i></a>
+                            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://gobiz.vn/{{ .RelPermalink }}"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

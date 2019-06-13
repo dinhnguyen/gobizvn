@@ -1,15 +1,114 @@
-{{ define "main" }}
-
-  <div class="mw6 center ph3 pv4">
-    <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
-    <div class="flex justify-between grey-3">
-      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-      <p>Read in {{ .ReadingTime }} minutes</p>
-    </div>
-    <div class="cms mw6">
-      <p>{{ .Description }}</p>
-      {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
-      {{ .Content }}
-    </div>
+<!doctype html>
+<html lang="en">
+  {{ partial "head" . }}
+  <body id="page-top">
+    {{ if eq (relURL .URL) ("/" | safeHTML) }}
+        {{ partial "nav-home" . }}
+      {{ else }}
+        {{ partial "nav" . }}
+    {{ end }}
+<section class="gdetail-news">
+  <div class="container">
+      <div class="row">
+          <div class="offset-md-0 offset-xl-2 col-lg-12 col-xl-8 offset-xl-2">
+              <div class="block-detail-new">
+                  <div class="detail-new-top">
+                      <span class="time">{{ .Date.Format "02/01/2006" }}</span>
+                      <div class="group-social">
+                            <a class="social-item" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-item" href="http://www.linkedin.com/shareArticle?mini=true&url=https://gobiz.vn/{{ .RelPermalink }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                  </div>
+                  <h1 class="title">{{.Title}}</h1>
+                  <div class="detail">
+                    {{ .Content }}
+                  </div>
+                  <!-- <div class="sign">
+                      <span>Gobiz.vn</span>
+                  </div> -->
+                  {{ partial "tag" .}}
+              </div>
+          </div>
+      </div>
   </div>
-{{ end }}
+</section>
+{{ partial "related-news" .}}
+<footer class="gfooter">
+        <div class="gfooter-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-xl-4">
+                        <div class="gfooter-list-info">
+                            <h4 class="title">Liên hệ</h1>
+                                <ul class="not-type">
+                                    <li>
+                                        <span class="company-name">Công ty cổ phần Gobiz</span>
+                                    </li>
+                                    <li>
+                                            <span> <strong>Email:</strong> <a href="#">cskh@gobiz.vn
+                                                </a></span>
+                                    </li>
+                                    <li>
+                                        <span><strong>Hotline:</strong> <a href="#"> 0336116261</a> </span>
+                                    </li>
+                                    <li>
+                                            <span><strong>Trụ sở Hà Nội:</strong> Số 5 ngõ 213 Giáp Nhất, Nhân Chính, Thanh Xuân, Hà Nội</span>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xl-3">
+                        <div class="gfooter-list-info">
+                            <h4 class="title">Công ty</h4>
+                            <ul class="">
+                                {{ $currentPage := . }}
+                                {{ range .Site.Menus.footer1 }}
+                                    <li class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+                                        <a class="" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xl-3">
+                        <div class="gfooter-list-info">
+                            <h4 class="title">Hỗ trợ</h4>
+                            <ul class="">
+                                {{ $currentPage := . }}
+                                {{ range .Site.Menus.footer2 }}
+                                    <li class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+                                        <a class="" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-xl-2">
+                        <div class="gfooter-list-info">
+                            <h4 class="title">Liên kết</h4>
+                            <div class="social">
+                                <a target="_blank" href="https://www.facebook.com/gobiz.vn"><i class="fab fa-facebook-f"></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/in/gobiz-vi%E1%BB%87t-nam-3483a2186/"><i class="fab fa-linkedin-in"></i></a>
+                                <a target="_blank" href="https://www.youtube.com/channel/UC2J-h7w8fNo0zEyN7XDgDYQ?disable_polymer=true"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="/app.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{"vendor/jquery/jquery.min.js" | absURL }}"></script>
+    <script src="{{"vendor/bootstrap/js/bootstrap.bundle.min.js" | absURL }}"></script>
+    <script src="{{"vendor/slick/slick.min.js" | absURL }}"></script>
+    <script src="{{"js/main.min.js" | absURL }}"></script>
+    </body>
+
+    </html>
+
+</body>
+</html>

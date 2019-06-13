@@ -1,0 +1,14 @@
+<article class="g-post">
+    <img class="img-post"{{ with .Params.image }} src="{{ . }}"{{ end }} alt="{{ .Title }}">
+    <div class="post-detail">
+        <h3 class="title-post"><a href="{{ .Permalink }}">{{ .Title }}</a> </h3>
+        <p class="description-post">{{ .Description }}</p>
+    </div>
+    <div class="news-social">
+        <span class="time">{{ .Date.Format "02/01/2006" }}</span>
+        <div class="group-news-social">
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</article>

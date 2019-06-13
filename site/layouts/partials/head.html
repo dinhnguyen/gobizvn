@@ -1,27 +1,74 @@
 <head>
-
-	<title>{{ .Title }} | Kaldi</title>
-	<link rel="stylesheet" href="/css/main.css" />
-
+	<title>{{ .Title }}</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+	<link rel="manifest" href="/fav/site.webmanifest">
+	<link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/fav/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="/fav/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Phần mềm quản lý nhập hàng và logistics số 1 tại Việt Nam">
 
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="{{"vendor/bootstrap/css/bootstrap.min.css" | absURL }}">
 
-	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="/manifest.json">
-	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400">
-	<meta name="theme-color" content="#fff">
-
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+	<!-- Slick core CSS -->
+	<link rel="stylesheet" href="{{"/vendor/slick/slick.css" | absURL }}">
+	<link rel="stylesheet" href="{{"/vendor/slick/slick-theme.css" | absURL }}">
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="{{"/css/styles.min.css" | absURL }}">
+	<style>
+		.gnavbar.fixed.active {
+			height: 65px;
+		}
+		.gnavbar.fixed.active .glogo {
+			width: auto;
+			height: 30px;
+		}
+	</style>
 	<!-- Open Graph -->
-	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Kaldi | Great coffee with a conscience">
-	<meta property="og:url" content="/">
-	<meta property="og:image" content="/img/og-image.jpg">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Gobiz - Phần mềm quản lý nhập hàng và logistics số 1 tại Việt Nam">
+	<meta property="og:description" content="Phần mềm quản lý nhập hàng Go CrossBorder, hỗ trợ nhập hàng trực tiếp từ Taobao, Tmall, 1688 với chi phí sử dụng phần mềm tốt nhất Việt Namm" />
+	<meta property="og:url" content="https://gobiz.vn">
+	<meta property="og:image" content="https://gobiz.vn/img/og-image.jpg">
 
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126491229-9"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-126491229-9');
+	</script>
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '362811617911946');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+		src="https://www.facebook.com/tr?id=362811617911946&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
+	<!-- harafunnel -->
+	<script src="//harafunnel.com/widget/877546889113320.js" async="async"></script>
+	<!-- end harafunnel -->
+
 </head>

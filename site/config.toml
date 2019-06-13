@@ -1,3 +1,123 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Homepage"
+title = "Gobiz.vn"
+
+
+[slug]
+  encoding = "ascii"
+  clean_accents  = true
+
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+
+[[menu.main]]
+    identifier = "index"
+    name = "Trang chủ"
+    title = "Trang chủ"
+    url = "/"
+    weight = -150
+[[menu.main]]
+    identifier = "phan-mem"
+    name = "Phần mềm"
+    title = "Phần mềm"
+    url = "/phan-mem/"
+    weight = -140
+[[menu.main]]
+    identifier = "post"
+    name = "Tin tức"
+    title = "Tin tức"
+    url = "/post/"
+    weight = -130
+[[menu.main]]
+    identifier = "bang-gia"
+    name = "Bảng giá"
+    title = "Bảng giá"
+    url = "/bang-gia/"
+    weight = -120
+# [[menu.main]]
+#     identifier = "partner"
+#     name = "Hợp tác"
+#     title = "Hợp tác"
+#     url = "/partnership/"
+#     weight = -110
+# [[menu.main]]
+#     identifier = "video"
+#     name = "Video hướng dẫn"
+#     title = "Video hướng dẫn"
+#     url = "/video/"
+#     weight = -130
+# [[menu.main]]
+#     identifier = "post"
+#     name = "Tin tức"
+#     title = "Tin tức"
+#     url = "/post/"
+#     weight = -100
+[[menu.main]]
+    identifier = "ve-gobiz"
+    name = "Về Gobiz"
+    title = "Về Gobiz"
+    url = "/ve-gobiz"
+    weight = -120
+
+
+[[menu.footer1]]
+    identifier = "ve-gobiz"
+    name = "Về Gobiz"
+    title = "Về Gobiz"
+    url = "/ve-gobiz"
+    weight = -150
+[[menu.footer1]]
+    identifier = "posts"
+    name = "Tin tức"
+    title = "Tin tức"
+    url = "/tin-tuc/"
+    weight = -140
+[[menu.footer1]]
+    identifier = "gobiz-forum"
+    name = "Cộng đồng Gobiz"
+    title = "Cộng đồng Gobiz"
+    url = "https://congdonggobiz.vn"
+    weight = -130
+[[menu.footer1]]
+    identifier = "chinh-sach-bao-mat"
+    name = "Chính sách bảo mật"
+    title = "Chính sách bảo mật"
+    url = "/chinh-sach-bao-mat/"
+    weight = -120
+[[menu.footer1]]
+    identifier = "dieu-khoan-dich-vu"
+    name = "Điều khoản dịch vụ"
+    title = "Điều khoản dịch vụ"
+    url = "/dieu-khoan-dich-vu/"
+    weight = -110
+[[menu.footer2]]
+    identifier = "video-huong-dan-su-dung"
+    name = "Video hướng dẫn sử dụng"
+    title = "Video hướng dẫn sử dụng"
+    url = "/video-huong-dan-su-dung"
+    weight = -150
+[[menu.footer2]]
+    identifier = "docs"
+    name = "Tài liệu hướng dẫn sử dụng"
+    title = "Tài liệu hướng dẫn sử dụng"
+    url = "/docs"
+    weight = -140
+[[menu.footer2]]
+    identifier = "changelogs"
+    name = "Thông tin cập nhật"
+    title = "Thông tin cập nhật"
+    url = "/changelog"
+    weight = -130
+[[menu.footer2]]
+    identifier = "payments"
+    name = "Hỗ trợ thanh toán"
+    title = "Hỗ trợ thanh toán"
+    url = "/payments"
+    weight = -120
+[[menu.footer2]]
+    identifier = "faqs"
+    name = "Câu hỏi thường gặp"
+    title = "Câu hỏi thường gặp"
+    url = "/faq"
+    weight = -110

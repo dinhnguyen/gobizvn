@@ -1,6 +1,14 @@
 backend:
   name: git-gateway
 
+site_url: https://gobiz.netlify.com
+
+# uglyurls: true
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 

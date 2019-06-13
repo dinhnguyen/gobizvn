@@ -1,9 +1,14 @@
 <!doctype html>
 <html lang="en">
   {{ partial "head" . }}
-  <body class="sans-serif">
-    {{ partial "nav" . }}
-    {{ block "main" . }}{{ end }} 
-    {{ partial "footer" . }} 
+  <body id="page-top">
+    {{ if eq (relURL .URL) ("/" | safeHTML) }}
+        {{ partial "nav-home" . }}
+      {{ else }}
+        {{ partial "nav" . }}
+    {{ end }}
+    {{ block "main" . }}
+    {{ end }}
+    {{ partial "footer" . }}
   </body>
 </html>

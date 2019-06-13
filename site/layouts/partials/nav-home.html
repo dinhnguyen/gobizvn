@@ -1,0 +1,85 @@
+<section class="gindex-top">
+    <!-- Header -->
+    <header class="gheader ">
+        <div class="container">
+            <div class="gheader-top">
+                <div class="gheader-top--hot-contact">
+                    <ul>
+                        <li><a href="tel:0336116261"><i class="fas fa-phone transform-rotate-90"></i>0336116261</a>
+                        </li>
+                        <li><a href="mailto:cskh@gobiz.vn"><i class="fas fa-envelope"></i>cskh@gobiz.vn</a></li>
+                    </ul>
+                </div>
+                <div class="gheader-top--social">
+                    <a target="_blank" href="https://www.facebook.com/gobiz.vn"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/gobiz-vi%E1%BB%87t-nam-3483a2186/"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UC2J-h7w8fNo0zEyN7XDgDYQ?disable_polymer=true"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg gnavbar" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img class="glogo" src="{{"images/logo-desktop.png" | absURL }}" alt="Gobiz"></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span></span>
+            </button>
+            <div class="collapse navbar-collapse gnavbar-menu " id="navbarResponsive">
+               <div class="list-menu">
+                   <div class="block-action-close">
+                       <button class="g-btn--close-navbar">
+                          <span></span>
+                       </button>
+                   </div>
+
+                   <ul class="navbar-nav text-uppercase  gnavbar-nav">
+                        {{ $currentPage := . }}
+                        {{ range .Site.Menus.main }}
+                            <li class="nav-item gnavbar-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+                                <a class="nav-link gnavbar-link" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                   <a target="_blank" href="https://forms.gle/2k2xHXwvJcEDBRfm8"><button type="button" class="g-btn g-btn--register">Đăng ký</button></a>
+               </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Phần slide đầu trang chủ -->
+
+        <section class="gindex-top--main">
+            <div class="container">
+                <div class="row column-md-reverse">
+                    <div class="col-lg-6 col-xl-6">
+                        <div class="gexperience">
+                            <h1 class="gexperience--title">Phần mềm quản lý nhập hàng & logistics số 1 tại Việt Nam</h1>
+
+                            <a target="_blank" href="https://forms.gle/2k2xHXwvJcEDBRfm8"><button type="button" class="g-btn g-btn--experience">Trải nghiệm miễn phí</button></a>
+                            <div class="hotline-xs">
+                                <ul>
+                                    <li><a href="#" class="hotline-icon"><i
+                                            class="fas fa-phone transform-rotate-90 "></i></a>
+                                        <a href="#" class="hotline-text">1900.9999</a>
+                                    </li>
+                                    <li><a href="#" class="hotline-icon"><i class="fas fa-envelope "></i></a>
+                                        <a href="#" class="hotline-text">gobiz.hot@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-6">
+                        <div id="gcarousel-main" >
+                            <img class="d-block w-100" src="images/topslide-1.jpg" alt="Gobiz">
+                            <img class="d-block w-100" src="images/topslide-2.jpg" alt="Gobiz">
+                            <img class="d-block w-100" src="images/topslide-3.jpg" alt="Gobiz">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</section>
